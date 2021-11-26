@@ -196,7 +196,7 @@ class WarnBottom(QGroupBox):
         super(WarnBottom, self).__init__()
         self.parent = parent
         self.setObjectName("widget")
-        self.setWindowTitle('Cow face identification system')
+        self.setWindowTitle('Cow face recognition system')
         self.resize(1200, 900)
         
         self.btn=QPushButton("Turn on the camera")
