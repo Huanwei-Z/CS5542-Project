@@ -207,7 +207,7 @@ def train_model(train_path, test_path):
     
     file=open('result/cnnresult.txt', 'w')
     for i in range(len(lst_result)):
-        file.write(('image%s'%lst_path[i])+('recognized as%d牛'%lst_result[i])+'\n')
+        file.write(('image%s'%lst_path[i])+('recognized as%dcow'%lst_result[i])+'\n')
     file.write('Accuracy：%s'%str(score[1]))
     file.close()
 
