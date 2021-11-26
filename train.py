@@ -47,7 +47,7 @@ def out_file():
         for out in last_out_file:
             with open('result/result.txt',"a+") as f:   #The file is written to the file after deduplication
                 f.write(out)
-        print("去重完成"+"\n")
+        print("Deduplication completed"+"\n")
 
 def splitimage(frame, i):
     face_class = cv2.CascadeClassifier(r'C:\Users\Administrator\AppData\Local\Programs\Python\Python37\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml')  #待更改
@@ -160,7 +160,7 @@ def buildModel(width, heigth, classes, depth=3):
 
     return model
 
-#训练模型
+#training model
 def train_model(train_path, test_path):
     model = buildModel(width=width, heigth=height, classes=classes)
     # Compiling the model requires three parameters, the optimizer, the loss function, and the metrics
@@ -207,7 +207,7 @@ def train_model(train_path, test_path):
     
     file=open('result/cnnresult.txt', 'w')
     for i in range(len(lst_result)):
-        file.write(('image%s'%lst_path[i])+('Identified as%d牛'%lst_result[i])+'\n')
+        file.write(('image%s'%lst_path[i])+('recognited as%d牛'%lst_result[i])+'\n')
     file.write('Accuracy：%s'%str(score[1]))
     file.close()
 
